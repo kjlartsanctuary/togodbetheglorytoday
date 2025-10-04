@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media | ToGodBeTheGloryToday</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 1rem 0 0 0;
+      gap: 2rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    .content h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 2rem;
+      align-items: center;
+    }
+
+    .social-links a {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #2c3e50;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      width: 200px;
+      text-align: center;
+    }
+
+    .social-links a:hover {
+      background-color: #1a252f;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Connect on Social Media</h1>
+    <p>Follow Toni to see new artwork, updates, and behind-the-scenes content.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="originals.html">Original Art</a></li>
+      <li><a href="reproductions.html">Prints</a></li>
+      <li><a href="biography.html">Biography</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="social.html">Social Media</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <h2>Stay Connected</h2>
+    <p>Links to Toni's social media accounts will be available here soon. Follow to keep up with the latest artwork and updates!</p>
+
+    <div class="social-links">
+      <!-- Replace "#" with the actual links later -->
+      <a href="#" target="_blank">Instagram</a>
+      <a href="#" target="_blank">Facebook</a>
+      <a href="#" target="_blank">Twitter</a>
+      <a href="#" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 ToGodBeTheGloryToday. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
