@@ -84,6 +84,7 @@
       overflow: hidden;
       text-align: center;
       transition: transform 0.3s;
+      cursor: pointer;
     }
 
     .gallery-item:hover {
@@ -99,6 +100,39 @@
     .gallery-item h3 {
       margin: 0.5rem 0 1rem 0;
       font-size: 1.1rem;
+    }
+
+    /* Lightbox styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    .close {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      font-size: 2rem;
+      color: white;
+      text-decoration: none;
     }
 
     footer {
@@ -138,34 +172,77 @@
 
   <div class="gallery">
     <div class="gallery-item">
-      <img src="assets/Children%20playing.jpg" alt="Children Playing">
-      <h3>Children Playing</h3>
+      <a href="#img1">
+        <img src="assets/Children%20playing.jpg" alt="Children Playing">
+        <h3>Children Playing</h3>
+      </a>
     </div>
 
     <div class="gallery-item">
-      <img src="assets/Farm%20Land.jpg" alt="Farm Land">
-      <h3>Farm Land</h3>
+      <a href="#img2">
+        <img src="assets/Farm%20Land.jpg" alt="Farm Land">
+        <h3>Farm Land</h3>
+      </a>
     </div>
 
     <div class="gallery-item">
-      <img src="assets/Flowers%20of%20praises.jpg" alt="Flowers of Praises">
-      <h3>Flowers of Praises</h3>
+      <a href="#img3">
+        <img src="assets/Flowers%20of%20praises.jpg" alt="Flowers of Praises">
+        <h3>Flowers of Praises</h3>
+      </a>
     </div>
 
     <div class="gallery-item">
-      <img src="assets/Hats%20and%20pocket%20books.jpg" alt="Hats and Pocket Books">
-      <h3>Hats and Pocket Books</h3>
+      <a href="#img4">
+        <img src="assets/Hats%20and%20pocket%20books.jpg" alt="Hats and Pocket Books">
+        <h3>Hats and Pocket Books</h3>
+      </a>
     </div>
 
     <div class="gallery-item">
-      <img src="assets/Sunday%20morning%20.jpg" alt="Sunday Morning">
-      <h3>Sunday Morning</h3>
+      <a href="#img5">
+        <img src="assets/Sunday%20morning%20.jpg" alt="Sunday Morning">
+        <h3>Sunday Morning</h3>
+      </a>
     </div>
 
     <div class="gallery-item">
-      <img src="assets/Up%20above%20my%20head.jpg" alt="Up Above My Head">
-      <h3>Up Above My Head</h3>
+      <a href="#img6">
+        <img src="assets/Up%20above%20my%20head.jpg" alt="Up Above My Head">
+        <h3>Up Above My Head</h3>
+      </a>
     </div>
+  </div>
+
+  <!-- Lightbox overlays -->
+  <div id="img1" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="assets/Children%20playing.jpg" alt="Children Playing">
+  </div>
+
+  <div id="img2" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="assets/Farm%20Land.jpg" alt="Farm Land">
+  </div>
+
+  <div id="img3" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="assets/Flowers%20of%20praises.jpg" alt="Flowers of Praises">
+  </div>
+
+  <div id="img4" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="assets/Hats%20and%20pocket%20books.jpg" alt="Hats and Pocket Books">
+  </div>
+
+  <div id="img5" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="assets/Sunday%20morning%20.jpg" alt="Sunday Morning">
+  </div>
+
+  <div id="img6" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="assets/Up%20above%20my%20head.jpg" alt="Up Above My Head">
   </div>
 
   <footer>
