@@ -6,11 +6,11 @@
   <title>Toni Wood | Prints & Reproductions</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: Georgia, 'Times New Roman', serif;
       margin: 0;
       padding: 0;
-      background-color: #f8f8f8;
-      color: #333;
+      background-color: #ffffff;
+      color: #333333;
     }
 
     header {
@@ -22,12 +22,12 @@
 
     header h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
 
     header p {
-      margin: 0.5rem 0 0 0;
-      font-size: 1.1rem;
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
     }
 
     nav ul {
@@ -35,7 +35,7 @@
       display: flex;
       justify-content: center;
       padding: 0;
-      margin: 1rem 0 2rem 0;
+      margin: 1rem 0 0 0;
       gap: 2rem;
     }
 
@@ -43,6 +43,7 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1rem;
     }
 
     nav ul li a:hover {
@@ -50,17 +51,19 @@
     }
 
     .pricing {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 2rem auto;
-      background: white;
-      padding: 1.5rem;
-      border-radius: 8px;
       text-align: center;
+      background-color: #f8f8f8;
+      padding: 1.5rem 2rem;
+      border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     .pricing h2 {
-      margin-top: 0;
+      margin: 0 0 1rem 0;
+      font-size: 1.8rem;
+      color: #2c3e50;
     }
 
     .pricing p {
@@ -73,18 +76,17 @@
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
       max-width: 1000px;
-      margin: 2rem auto;
+      margin: 3rem auto;
       padding: 0 1rem;
     }
 
     .gallery-item {
-      background: white;
+      background-color: #ffffff;
       border-radius: 8px;
+      text-align: center;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       overflow: hidden;
-      text-align: center;
       transition: transform 0.3s;
-      cursor: pointer;
     }
 
     .gallery-item:hover {
@@ -98,41 +100,9 @@
     }
 
     .gallery-item h3 {
-      margin: 0.5rem 0 1rem 0;
+      margin: 0.8rem 0;
       font-size: 1.1rem;
-    }
-
-    /* Lightbox styles */
-    .lightbox {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.8);
-      align-items: center;
-      justify-content: center;
-    }
-
-    .lightbox img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 8px;
-    }
-
-    .lightbox:target {
-      display: flex;
-    }
-
-    .close {
-      position: absolute;
-      top: 2rem;
-      right: 2rem;
-      font-size: 2rem;
-      color: white;
-      text-decoration: none;
+      color: #2c3e50;
     }
 
     footer {
@@ -142,14 +112,13 @@
       padding: 1.5rem;
       margin-top: 3rem;
     }
-
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Toni Wood | Prints & Reproductions</h1>
-    <p>All prints available in multiple sizes and framing options</p>
+    <h1>Toni Wood Prints & Reproductions</h1>
+    <p>High-quality reproductions of original artwork, available in multiple sizes and packaging options.</p>
   </header>
 
   <nav>
@@ -162,91 +131,49 @@
     </ul>
   </nav>
 
-  <div class="pricing">
-    <h2>Pricing & Sizes</h2>
-    <p>8 x 10" image matted to 11 x 14" in clear resealable wrap: <strong>$40</strong></p>
-    <p>16 x 20" image in 20 x 24" clear resealable wrap: <strong>$125</strong></p>
-    <p>8 x 10" framed in black 2" frame with white mat: <strong>$125</strong></p>
-    <p>16 x 20" framed in black 2" frame with white mat: <strong>$275</strong></p>
-  </div>
+  <section class="pricing">
+    <h2>Pricing</h2>
+    <p>Sizes:</p>
+    <p>8 x 10" image, matted to 11 x 14", clear resealable wrap: <strong>$40</strong></p>
+    <p>16 x 20" image, matted to 20 x 24", clear resealable wrap: <strong>$125</strong></p>
+    <p>Framed in black 2" frame with white mat:</p>
+    <p>8 x 10": <strong>$125</strong> | 16 x 20": <strong>$275</strong></p>
+  </section>
 
-  <div class="gallery">
+  <main class="gallery">
     <div class="gallery-item">
-      <a href="#img1">
-        <img src="assets/Children%20playing.jpg" alt="Children Playing">
-        <h3>Children Playing</h3>
-      </a>
+      <img src="assets/Children%20playing.jpg" alt="Children Playing">
+      <h3>Children Playing</h3>
     </div>
 
     <div class="gallery-item">
-      <a href="#img2">
-        <img src="assets/Farm%20Land.jpg" alt="Farm Land">
-        <h3>Farm Land</h3>
-      </a>
+      <img src="assets/Farm%20Land.jpg" alt="Farm Land">
+      <h3>Farm Land</h3>
     </div>
 
     <div class="gallery-item">
-      <a href="#img3">
-        <img src="assets/Flowers%20of%20praises.jpg" alt="Flowers of Praises">
-        <h3>Flowers of Praises</h3>
-      </a>
+      <img src="assets/Flowers%20of%20praises.jpg" alt="Flowers of Praises">
+      <h3>Flowers of Praises</h3>
     </div>
 
     <div class="gallery-item">
-      <a href="#img4">
-        <img src="assets/Hats%20and%20pocket%20books.jpg" alt="Hats and Pocket Books">
-        <h3>Hats and Pocket Books</h3>
-      </a>
+      <img src="assets/Hats%20and%20pocket%20books.jpg" alt="Hats and Pocket Books">
+      <h3>Hats and Pocket Books</h3>
     </div>
 
     <div class="gallery-item">
-      <a href="#img5">
-        <img src="assets/Sunday%20morning%20.jpg" alt="Sunday Morning">
-        <h3>Sunday Morning</h3>
-      </a>
+      <img src="assets/Sunday%20morning%20.jpg" alt="Sunday Morning">
+      <h3>Sunday Morning</h3>
     </div>
 
     <div class="gallery-item">
-      <a href="#img6">
-        <img src="assets/Up%20above%20my%20head.jpg" alt="Up Above My Head">
-        <h3>Up Above My Head</h3>
-      </a>
+      <img src="assets/Up%20above%20my%20head.jpg" alt="Up Above My Head">
+      <h3>Up Above My Head</h3>
     </div>
-  </div>
-
-  <!-- Lightbox overlays -->
-  <div id="img1" class="lightbox">
-    <a href="#" class="close">&times;</a>
-    <img src="assets/Children%20playing.jpg" alt="Children Playing">
-  </div>
-
-  <div id="img2" class="lightbox">
-    <a href="#" class="close">&times;</a>
-    <img src="assets/Farm%20Land.jpg" alt="Farm Land">
-  </div>
-
-  <div id="img3" class="lightbox">
-    <a href="#" class="close">&times;</a>
-    <img src="assets/Flowers%20of%20praises.jpg" alt="Flowers of Praises">
-  </div>
-
-  <div id="img4" class="lightbox">
-    <a href="#" class="close">&times;</a>
-    <img src="assets/Hats%20and%20pocket%20books.jpg" alt="Hats and Pocket Books">
-  </div>
-
-  <div id="img5" class="lightbox">
-    <a href="#" class="close">&times;</a>
-    <img src="assets/Sunday%20morning%20.jpg" alt="Sunday Morning">
-  </div>
-
-  <div id="img6" class="lightbox">
-    <a href="#" class="close">&times;</a>
-    <img src="assets/Up%20above%20my%20head.jpg" alt="Up Above My Head">
-  </div>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Toni Wood | To God Be The Glory | All Rights Reserved</p>
+    <p>&copy; 2025 ToGodBeTheGloryToday | Designed by Toni Wood & KJL Art Sanctuary</p>
   </footer>
 
 </body>
