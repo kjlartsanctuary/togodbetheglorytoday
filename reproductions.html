@@ -11,6 +11,7 @@
       padding: 0;
       background-color: #ffffff;
       color: #333333;
+      line-height: 1.6;
     }
 
     header {
@@ -51,58 +52,74 @@
     }
 
     .pricing {
-      max-width: 1000px;
+      max-width: 900px;
       margin: 2rem auto;
       text-align: center;
-      background-color: #f8f8f8;
-      padding: 1.5rem 2rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 0 1rem;
+      font-size: 1rem;
     }
 
     .pricing h2 {
-      margin: 0 0 1rem 0;
-      font-size: 1.8rem;
       color: #2c3e50;
+      font-size: 2rem;
+      margin-bottom: 1rem;
     }
 
     .pricing p {
       margin: 0.5rem 0;
-      font-size: 1rem;
     }
 
     .gallery {
+      max-width: 1000px;
+      margin: 2rem auto;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
-      max-width: 1000px;
-      margin: 3rem auto;
       padding: 0 1rem;
     }
 
-    .gallery-item {
-      background-color: #ffffff;
+    .art-item {
+      position: relative;
+      overflow: hidden;
       border-radius: 8px;
       text-align: center;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      overflow: hidden;
       transition: transform 0.3s;
+      background: #fff;
+      padding-bottom: 1rem;
     }
 
-    .gallery-item:hover {
+    .art-item img {
+      max-width: 100%;
+      height: auto;
+      transition: transform 0.3s;
+      border-radius: 8px;
+    }
+
+    .art-item:hover img {
       transform: scale(1.05);
     }
 
-    .gallery-item img {
-      width: 100%;
-      height: auto;
-      display: block;
+    .art-title {
+      margin-top: 0.8rem;
+      font-weight: bold;
+      font-size: 1rem;
+      color: #2c3e50;
     }
 
-    .gallery-item h3 {
-      margin: 0.8rem 0;
-      font-size: 1.1rem;
-      color: #2c3e50;
+    .art-button {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 8px 14px;
+      background-color: #2c3e50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 0.9rem;
+    }
+
+    .art-button:hover {
+      background-color: #1a252f;
     }
 
     footer {
@@ -118,7 +135,7 @@
 
   <header>
     <h1>Toni Wood Prints & Reproductions</h1>
-    <p>High-quality reproductions of original artwork, available in multiple sizes and packaging options.</p>
+    <p>Discover high-quality reproductions of Toni's artwork.</p>
   </header>
 
   <nav>
@@ -133,44 +150,49 @@
 
   <section class="pricing">
     <h2>Pricing</h2>
-    <p>Sizes:</p>
-    <p>8 x 10" image, matted to 11 x 14", clear resealable wrap: <strong>$40</strong></p>
-    <p>16 x 20" image, matted to 20 x 24", clear resealable wrap: <strong>$125</strong></p>
-    <p>Framed in black 2" frame with white mat:</p>
-    <p>8 x 10": <strong>$125</strong> | 16 x 20": <strong>$275</strong></p>
+    <p>8 x 10" matted to 11 x 14" in clear resealable wrap – <strong>$40</strong></p>
+    <p>16 x 20" image in 20 x 24" clear resealable wrap – <strong>$125</strong></p>
+    <p>8 x 10" framed in black 2" frame with white mat – <strong>$125</strong></p>
+    <p>16 x 20" framed in black 2" frame with white mat – <strong>$275</strong></p>
   </section>
 
-  <main class="gallery">
-    <div class="gallery-item">
-      <img src="assets/Children%20playing.jpg" alt="Children Playing">
-      <h3>Children Playing</h3>
+  <section class="gallery">
+    <div class="art-item">
+      <img src="https://github.com/kjlartsanctuary/togodbetheglorytoday/blob/main/assets/Children%20playing.jpg" alt="Children playing">
+      <div class="art-title">Children Playing</div>
+      <a href="#" class="art-button">See Full Image</a>
     </div>
 
-    <div class="gallery-item">
-      <img src="assets/Farm%20Land.jpg" alt="Farm Land">
-      <h3>Farm Land</h3>
+    <div class="art-item">
+      <img src="https://github.com/kjlartsanctuary/togodbetheglorytoday/blob/main/assets/Farm%20Land.jpg" alt="Farm Land">
+      <div class="art-title">Farm Land</div>
+      <a href="#" class="art-button">See Full Image</a>
     </div>
 
-    <div class="gallery-item">
-      <img src="assets/Flowers%20of%20praises.jpg" alt="Flowers of Praises">
-      <h3>Flowers of Praises</h3>
+    <div class="art-item">
+      <img src="https://github.com/kjlartsanctuary/togodbetheglorytoday/blob/main/assets/Flowers%20of%20praises.jpg" alt="Flowers of Praises">
+      <div class="art-title">Flowers of Praises</div>
+      <a href="#" class="art-button">See Full Image</a>
     </div>
 
-    <div class="gallery-item">
-      <img src="assets/Hats%20and%20pocket%20books.jpg" alt="Hats and Pocket Books">
-      <h3>Hats and Pocket Books</h3>
+    <div class="art-item">
+      <img src="https://github.com/kjlartsanctuary/togodbetheglorytoday/blob/main/assets/Hats%20and%20pocket%20books.jpg" alt="Hats and Pocket Books">
+      <div class="art-title">Hats and Pocket Books</div>
+      <a href="#" class="art-button">See Full Image</a>
     </div>
 
-    <div class="gallery-item">
-      <img src="assets/Sunday%20morning%20.jpg" alt="Sunday Morning">
-      <h3>Sunday Morning</h3>
+    <div class="art-item">
+      <img src="https://github.com/kjlartsanctuary/togodbetheglorytoday/blob/main/assets/Sunday%20morning%20.jpg" alt="Sunday Morning">
+      <div class="art-title">Sunday Morning</div>
+      <a href="#" class="art-button">See Full Image</a>
     </div>
 
-    <div class="gallery-item">
-      <img src="assets/Up%20above%20my%20head.jpg" alt="Up Above My Head">
-      <h3>Up Above My Head</h3>
+    <div class="art-item">
+      <img src="https://github.com/kjlartsanctuary/togodbetheglorytoday/blob/main/assets/Up%20above%20my%20head.jpg" alt="Up Above My Head">
+      <div class="art-title">Up Above My Head</div>
+      <a href="#" class="art-button">See Full Image</a>
     </div>
-  </main>
+  </section>
 
   <footer>
     <p>&copy; 2025 ToGodBeTheGloryToday | Designed by Toni Wood & KJL Art Sanctuary</p>
