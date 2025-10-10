@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Biography | ToGodBeTheGloryToday</title>
+  <title>About the Artist | Toni Wood</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f8f8f8;
+      font-family: 'Arial', sans-serif;
+      background-color: #f8f8f8;
       margin: 0;
       padding: 0;
       color: #333;
+      line-height: 1.6;
     }
 
     header {
@@ -22,12 +23,14 @@
 
     header h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
     }
 
     header p {
       margin-top: 0.5rem;
       font-size: 1.1rem;
+      color: #ecf0f1;
     }
 
     nav ul {
@@ -52,10 +55,9 @@
     .content {
       max-width: 900px;
       margin: 3rem auto;
-      padding: 0 1rem;
       background: white;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       padding: 2rem;
       text-align: center;
     }
@@ -67,5 +69,71 @@
       margin-bottom: 1.5rem;
     }
 
+    .content h2 {
+      font-size: 1.8rem;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+
     .content p {
-      fon
+      font-size: 1.05rem;
+      text-align: justify;
+      margin-bottom: 1.5rem;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+
+    a.social-link {
+      color: #2980b9;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a.social-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Toni Wood</h1>
+    <p>Faith • Love • Art • Purpose</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="biography.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="content">
+    <img src="toniwood-portrait.jpg" alt="Portrait of Toni Wood">
+    <h2>About the Artist – Toni Wood</h2>
+
+    <p>Toni Wood is a self-taught artist whose creative journey began in 2018 while taking art classes at her church. What started as a new experience quickly became a lifelong passion — a way to express her faith, love, and culture through color and movement.</p>
+
+    <p>Working with acrylic, pencil, and watercolor, Toni’s art radiates peace and positivity. She’s especially drawn to acrylic for its vibrant tones and quick-drying quality, which reflect her joyful, faith-filled spirit. Guided by her favorite scripture — “I can do all things through Christ who strengthens me” — Toni paints from the heart, creating work that uplifts and inspires.</p>
+
+    <p>Her art has been featured in church exhibitions and local showcases, where her message resonates deeply: creativity is a gift from God, and it’s never too late to discover it. Each piece she creates is an invitation to see the beauty of faith, love, and perseverance.</p>
+
+    <p><strong>Follow Toni Wood on Instagram:</strong> 
+      <a href="https://www.instagram.com/ToniWoodArt" target="_blank" class="social-link">@ToniWoodArt</a><br>
+      <strong>Website:</strong> 
+      <a href="https://www.ToniWoodArt.com" target="_blank" class="social-link">www.ToniWoodArt.com</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2025 Toni Wood | Designed with purpose and faith | To God Be The Glory</p>
+  </footer>
+</body>
+</html>
