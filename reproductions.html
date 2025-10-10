@@ -1,49 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ToGodBeTheGloryToday | Prints & Reproductions</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ToGodBeTheGloryToday | Reproductions</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Times New Roman', serif;
       margin: 0;
       padding: 0;
       background-color: #ffffff;
-      color: #000;
+      color: #333;
+      line-height: 1.6;
     }
 
     header {
-      background-color: #ffffff;
-      color: #000;
-      padding: 2rem;
+      background-color: #2c3e50;
+      color: #fff;
+      padding: 1.5rem 1rem;
       text-align: center;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
 
     header p {
       margin-top: 0.5rem;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
 
     nav ul {
       list-style: none;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       padding: 0;
       margin: 1rem 0;
-      gap: 2rem;
+      gap: 1.5rem;
     }
 
     nav ul li a {
-      color: #000;
+      color: #2c3e50;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
 
     nav ul li a:hover {
@@ -62,24 +68,32 @@
     }
 
     .section h2 {
-      font-size: 2rem;
+      font-size: 1.8rem;
+      color: #2c3e50;
       margin-bottom: 1rem;
     }
 
     .section p {
-      font-size: 1.1rem;
-      line-height: 1.5;
+      font-size: 1rem;
       margin-bottom: 1rem;
     }
 
+    /* Grid for artwork */
     .reproductions-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 1rem;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      padding: 0 1rem;
     }
 
     .product {
+      background-color: #f8f8f8;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
       cursor: pointer;
     }
 
@@ -89,51 +103,79 @@
       transition: transform 0.3s;
     }
 
-    .product img:hover {
-      transform: scale(1.05);
+    .product:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .product h3 {
+      margin-top: 0.8rem;
+      font-size: 1.1rem;
     }
 
     footer {
-      background-color: #ffffff;
-      color: #000;
+      background-color: #2c3e50;
+      color: #fff;
       text-align: center;
       padding: 1.5rem;
       margin-top: 3rem;
-      border-top: 1px solid #ccc;
+      font-size: 0.9rem;
     }
 
-    /* Lightbox overlay */
-    #lightbox {
+    /* Lightbox Styles */
+    .lightbox {
+      display: none;
       position: fixed;
-      top: 0;
+      z-index: 999;
+      padding-top: 60px;
       left: 0;
+      top: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.8);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9);
     }
 
-    #lightbox img {
+    .lightbox-content {
+      margin: auto;
+      display: block;
       max-width: 90%;
-      max-height: 90%;
-      border-radius: 8px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      max-height: 80%;
+      border-radius: 10px;
     }
 
-    #lightbox:target {
-      display: flex;
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       header h1 {
-        font-size: 2rem;
+        font-size: 1.6rem;
       }
+
       nav ul {
         flex-direction: column;
-        gap: 1rem;
+        gap: 0.8rem;
+      }
+
+      .section h2 {
+        font-size: 1.4rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .section p {
+        font-size: 0.95rem;
+      }
+
+      .product h3 {
+        font-size: 1rem;
       }
     }
   </style>
@@ -141,14 +183,14 @@
 <body>
 
   <header>
-    <h1>Toni Wood Reproductions</h1>
-    <p>High-quality reproductions of Toni Wood's artwork in multiple formats and sizes.</p>
+    <h1>Toni Q. Wood Reproductions</h1>
+    <p>Archival-quality fine art prints available in multiple sizes and formats.</p>
   </header>
 
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="reproductions.html">Prints</a></li>
+      <li><a href="reproductions.html">Reproductions</a></li>
       <li><a href="biography.html">Biography</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
@@ -157,60 +199,64 @@
   <main>
     <div class="section">
       <h2>Pricing & Sizes</h2>
-      <p><strong>8 x 10" image size</strong> (matted to 11 x 14"): $40</p>
-      <p><strong>16 x 20" image size</strong> (in 20 x 24" wrap): $125</p>
-      <p><strong>Framed in black 2" frame with white mat:</strong> 8 x 10": $125 | 16 x 20": $275</p>
-      <p>All reproductions are high-quality, archival, and ready to display.</p>
+      <p><strong>8 x 10” image size</strong> (matted to 11 x 14”): $40</p>
+      <p><strong>16 x 20” image size</strong> (in 20 x 24” sleeve): $125</p>
+      <p><strong>Framed in black 2” frame with white mat:</strong> 8x10 $125 | 16x20 $275</p>
+      <p>All reproductions are printed on premium archival paper and carefully packaged.</p>
     </div>
 
     <div class="section">
       <h2>Gallery</h2>
+      <p>Tap an image to view in full screen.</p>
       <div class="reproductions-grid">
         <div class="product">
-          <a href="#img1"><img src="assets/Children playing.jpg" alt="Children Playing"></a>
+          <img src="https://raw.githubusercontent.com/kjlartsanctuary/togodbetheglorytoday/main/assets/Children%20playing.jpg" alt="Children Playing" onclick="openLightbox(this)">
+          <h3>Children Playing</h3>
         </div>
         <div class="product">
-          <a href="#img2"><img src="assets/Farm Land.jpg" alt="Farm Land"></a>
+          <img src="https://raw.githubusercontent.com/kjlartsanctuary/togodbetheglorytoday/main/assets/Farm%20Land.jpg" alt="Farm Land" onclick="openLightbox(this)">
+          <h3>Farm Land</h3>
         </div>
         <div class="product">
-          <a href="#img3"><img src="assets/Flowers of praises.jpg" alt="Flowers of Praises"></a>
+          <img src="https://raw.githubusercontent.com/kjlartsanctuary/togodbetheglorytoday/main/assets/Flowers%20of%20praises.jpg" alt="Flowers of Praises" onclick="openLightbox(this)">
+          <h3>Flowers of Praises</h3>
         </div>
         <div class="product">
-          <a href="#img4"><img src="assets/Hats and pocket books.jpg" alt="Hats and Pocket Books"></a>
+          <img src="https://raw.githubusercontent.com/kjlartsanctuary/togodbetheglorytoday/main/assets/Hats%20and%20pocket%20books.jpg" alt="Hats and Pocket Books" onclick="openLightbox(this)">
+          <h3>Hats and Pocket Books</h3>
         </div>
         <div class="product">
-          <a href="#img5"><img src="assets/Sunday morning.jpg" alt="Sunday Morning"></a>
+          <img src="https://raw.githubusercontent.com/kjlartsanctuary/togodbetheglorytoday/main/assets/Sunday%20morning%20.jpg" alt="Sunday Morning" onclick="openLightbox(this)">
+          <h3>Sunday Morning</h3>
         </div>
         <div class="product">
-          <a href="#img6"><img src="assets/Up above my head.jpg" alt="Up Above My Head"></a>
+          <img src="https://raw.githubusercontent.com/kjlartsanctuary/togodbetheglorytoday/main/assets/Up%20above%20my%20head.jpg" alt="Up Above My Head" onclick="openLightbox(this)">
+          <h3>Up Above My Head</h3>
         </div>
       </div>
     </div>
   </main>
 
-  <!-- Lightbox sections -->
-  <div id="img1" class="lightbox">
-    <a href="#"><img src="assets/Children playing.jpg" alt="Children Playing"></a>
-  </div>
-  <div id="img2" class="lightbox">
-    <a href="#"><img src="assets/Farm Land.jpg" alt="Farm Land"></a>
-  </div>
-  <div id="img3" class="lightbox">
-    <a href="#"><img src="assets/Flowers of praises.jpg" alt="Flowers of Praises"></a>
-  </div>
-  <div id="img4" class="lightbox">
-    <a href="#"><img src="assets/Hats and pocket books.jpg" alt="Hats and Pocket Books"></a>
-  </div>
-  <div id="img5" class="lightbox">
-    <a href="#"><img src="assets/Sunday morning.jpg" alt="Sunday Morning"></a>
-  </div>
-  <div id="img6" class="lightbox">
-    <a href="#"><img src="assets/Up above my head.jpg" alt="Up Above My Head"></a>
+  <footer>
+    <p>&copy; 2025 ToGodBeTheGloryToday | Designed by Toni Q. Wood & KJL Art Sanctuary</p>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" src="" alt="">
   </div>
 
-  <footer>
-    <p>&copy; 2025 ToGodBeTheGloryToday | Designed by Toni Wood & KJL Art Sanctuary</p>
-  </footer>
+  <script>
+    function openLightbox(imgElement) {
+      document.getElementById("lightbox").style.display = "block";
+      document.getElementById("lightbox-img").src = imgElement.src;
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+  </script>
 
 </body>
 </html>
